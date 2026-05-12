@@ -1,5 +1,10 @@
-import { createTheme } from '@mantine/core';
+import { createTheme, colorsTuple } from '@mantine/core';
 
 export const theme = createTheme({
-  /** Put your mantine theme override here */
+  primaryColor: 'mainColor',
+  defaultRadius: 'xl',
+    colors: {
+      mainColor: colorsTuple('var(--mantine-color-lime-5)'),
+      
+    },
 });

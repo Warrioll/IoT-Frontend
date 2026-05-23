@@ -32,7 +32,7 @@ export default function LoginPage() {
           const status = err?.response?.status;
           setBlocked(false);
           if (status === 401) {
-            return <b>Username or password is incorrect!</b>;
+            return <b style={{ textAlign: 'center' }}>Username or password is incorrect!</b>;
           }
           return <b>Could not login.</b>;
         },

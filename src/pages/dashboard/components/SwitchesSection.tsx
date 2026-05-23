@@ -20,6 +20,11 @@ export default function SwitchesSection() {
         async () => {
           const data = await getDeviceStatus();
           setDeviceStatus({ ...data });
+          // if (deviceStatus?.isConnected) {
+          //   toast.success(() => <b>Device is connected!</b>);
+          // } else {
+          //   toast.error(() => <b>Device is not connected!</b>);
+          // }
         },
         {
           loading: 'Checking connection to device...',
@@ -32,18 +37,16 @@ export default function SwitchesSection() {
     }
   };
 
-  useEffect(() => {
-    const setDevise = async () => {
-      try {
-        const data = await getDeviceStatus();
-        setDeviceStatus({ ...data });
-      } catch (error) {
-        console.log(error);
-      }
-    };
-
-    setDevise();
-  }, []);
+  // useEffect(() => {
+  //   console.log('hehe: ', deviceStatus);
+  //   if (deviceStatus) {
+  //     if (deviceStatus?.isConnected) {
+  //       toast.success('Device is connected!');
+  //     } else {
+  //       toast.error('Device is not connected!');
+  //     }
+  //   }
+  // }, [releaseConnectionToast]);
 
   return (
     <Flex justify="center" w="100vw">
